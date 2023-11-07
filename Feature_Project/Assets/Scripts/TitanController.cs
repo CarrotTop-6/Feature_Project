@@ -2,17 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Jack Bradford
+//Controls Titan spawning, movement, and abilities
+//11/7/2023
+
 public class TitanController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    //Variables
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //On spawn fall until ground
+
+    //When player inside
+    //Move
+    //Dash??
+    //Abilities
+    //Core Ability
 }
