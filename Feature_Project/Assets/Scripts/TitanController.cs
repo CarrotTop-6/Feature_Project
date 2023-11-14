@@ -9,6 +9,8 @@ using UnityEngine;
 public class TitanController : MonoBehaviour
 {
     //Variables
+    private float fallSpeed;
+    private bool groundContact = false;
 
     //On spawn fall until ground
 
@@ -17,4 +19,20 @@ public class TitanController : MonoBehaviour
     //Dash??
     //Abilities
     //Core Ability
+
+    private void inbound()
+    {
+        while (groundContact == false)
+        {
+
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Enviroment"))
+        {
+            Debug.Log("Floor");
+        }
+    }
 }

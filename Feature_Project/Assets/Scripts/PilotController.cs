@@ -13,7 +13,9 @@ using UnityEngine;
 public class PilotController : MonoBehaviour
 {
     //Variables
-
+    public GameObject titan;
+    [SerializeField]
+    private bool titanActive = false;
 
     //Update
     //Movement
@@ -22,4 +24,10 @@ public class PilotController : MonoBehaviour
 
     //Spawn Titan (raycast / position in front)
     //Detect range to titan (distance / box collider)
+
+
+    private void titanFall()
+    {
+
+    }
 }
