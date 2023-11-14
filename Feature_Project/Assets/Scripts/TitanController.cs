@@ -11,10 +11,13 @@ public class TitanController : MonoBehaviour
     //Variables
     private float fallSpeed;
     private bool groundContact = false;
-    private Rigidbody rb;
+    public Rigidbody rb;
 
     //On spawn fall until ground
-
+    private void Start()
+    {
+        inbound();
+    }
     //When player inside
     //Move
     //Dash??
@@ -25,7 +28,7 @@ public class TitanController : MonoBehaviour
     {
         while (groundContact == false)
         {
-            rb.velocity = new Vector2(0, -fallSpeed);
+            rb.velocity = new Vector3(0, -fallSpeed, 0);
         }
     }
 
