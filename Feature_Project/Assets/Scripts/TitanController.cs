@@ -11,6 +11,7 @@ public class TitanController : MonoBehaviour
     //Variables
     private float fallSpeed;
     private bool groundContact = false;
+    private Rigidbody rb;
 
     //On spawn fall until ground
 
@@ -24,7 +25,7 @@ public class TitanController : MonoBehaviour
     {
         while (groundContact == false)
         {
-
+            rb.velocity = new Vector2(0, -fallSpeed);
         }
     }
 
