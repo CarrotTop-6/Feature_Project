@@ -9,12 +9,12 @@ using UnityEngine;
 public class TitanController : MonoBehaviour
 {
     //Variables
-    private float fallSpeed;
+    private float fallSpeed = -30;
     private bool groundContact = false;
     public Rigidbody rb;
 
     //On spawn fall until ground
-    private void Start()
+    private void Update()
     {
         inbound();
     }
@@ -26,9 +26,9 @@ public class TitanController : MonoBehaviour
 
     private void inbound()
     {
-        while (groundContact == false)
+        if (groundContact == false)
         {
-            rb.velocity = new Vector3(0, -fallSpeed, 0);
+            rb.velocity = new Vector3(0, fallSpeed, 0);
         }
     }
 
@@ -37,6 +37,7 @@ public class TitanController : MonoBehaviour
         if(collision.gameObject.CompareTag("Enviroment"))
         {
             Debug.Log("Floor");
+            groundContact = true;
         }
     }
 }

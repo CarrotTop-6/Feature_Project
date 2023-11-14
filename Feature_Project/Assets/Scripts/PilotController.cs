@@ -24,10 +24,16 @@ public class PilotController : MonoBehaviour
 
     //Spawn Titan (raycast / position in front)
     //Detect range to titan (distance / box collider)
-
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            titanFall();
+        }
+    }
 
     private void titanFall()
     {
-
+        Instantiate(titan, new Vector3(transform.position.x + 5, transform.position.y + 50, transform.position.z), Quaternion.identity);
     }
 }
