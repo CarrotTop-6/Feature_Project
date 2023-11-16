@@ -14,6 +14,8 @@ public class PilotController : MonoBehaviour
 {
     //Variables
     public GameObject titan;
+    public GameObject dropLocation;
+
     [SerializeField]
     private bool titanActive = false;
 
@@ -35,5 +37,6 @@ public class PilotController : MonoBehaviour
     private void titanFall()
     {
         Instantiate(titan, new Vector3(transform.position.x + 5, transform.position.y + 50, transform.position.z), Quaternion.identity);
+        Instantiate(dropLocation, new Vector3(transform.position.x + 5, transform.position.y - 0.5f, transform.position.z), Quaternion.identity);
     }
 }
