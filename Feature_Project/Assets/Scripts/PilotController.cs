@@ -16,6 +16,8 @@ public class PilotController : MonoBehaviour
     public GameObject titan;
     public GameObject dropLocation;
 
+    public Rigidbody rb;
+
     [SerializeField]
     private bool titanActive = false;
 
@@ -32,11 +34,20 @@ public class PilotController : MonoBehaviour
         {
             titanFall();
         }
+
+        if(titanActive)
+        {
+            if (Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, GameObject.FindGameObjectWithTag("Titan").transform.position) < 5) 
+            {
+                Debug.Log("X to Embark");
+            } 
+        }
     }
 
     private void titanFall()
     {
-        Instantiate(titan, new Vector3(transform.position.x + 5, transform.position.y + 50, transform.position.z), Quaternion.identity);
-        Instantiate(dropLocation, new Vector3(transform.position.x + 5, transform.position.y - 0.5f, transform.position.z), Quaternion.identity);
+        titanActive = true;
+        Instantiate(titan, new Vector3(transform.position.x + 10, transform.position.y + 300, transform.position.z), Quaternion.identity);
+        Instantiate(dropLocation, new Vector3(transform.position.x + 10, transform.position.y - 0.5f, transform.position.z), Quaternion.identity);
     }
 }

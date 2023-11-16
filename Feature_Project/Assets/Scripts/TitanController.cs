@@ -9,7 +9,7 @@ using UnityEngine;
 public class TitanController : MonoBehaviour
 {
     //Variables
-    private float fallSpeed = -30;
+    private float fallSpeed = -80;
     private bool groundContact = false;
     public Rigidbody rb;
 
@@ -38,6 +38,11 @@ public class TitanController : MonoBehaviour
         {
             Debug.Log("Floor");
             groundContact = true;
+        }
+
+        if(collision.gameObject.CompareTag("LandingPad"))
+        {
+            Destroy(collision.gameObject);
         }
     }
 }
