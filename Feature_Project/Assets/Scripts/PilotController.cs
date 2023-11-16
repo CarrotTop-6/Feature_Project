@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 //Jack Bradford
 //Controls the pilots movement and can deploy a titan
@@ -28,6 +30,9 @@ public class PilotController : MonoBehaviour
 
     [SerializeField]
     private bool titanActive = false;
+
+    public TMP_Text embarkText;
+    private float embarkDist = 7f;
 
     //Update
     //Movement
@@ -76,10 +81,15 @@ public class PilotController : MonoBehaviour
 
         if(titanActive)
         {
-            if (Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, GameObject.FindGameObjectWithTag("Titan").transform.position) < 5) 
+            if (Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, GameObject.FindGameObjectWithTag("Titan").transform.position) < embarkDist) 
             {
                 Debug.Log("X to Embark");
-            } 
+                embarkText.text = "X to Embark";
+            }
+            else
+            {
+                embarkText.text = "";
+            }
         }
         
     }
