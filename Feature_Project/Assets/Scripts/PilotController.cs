@@ -69,10 +69,8 @@ public class PilotController : MonoBehaviour
     //Detect range to titan (distance / box collider)
     private void Update()
     {
-        moveDirection = move.ReadValue<Vector2>();
-
-
         /*
+        moveDirection = move.ReadValue<Vector2>();
         if (Input.GetKeyDown(KeyCode.E))
         {
             titanFall();
@@ -94,9 +92,13 @@ public class PilotController : MonoBehaviour
         
     }
 
+
+
     private void FixedUpdate()
     {
-        rb.velocity = new Vector3(moveDirection.x * moveSpeed, moveDirection.z * moveSpeed, moveDirection.y * moveSpeed);
+        //rb.velocity = 
+        //transform.position = Vector3.forward * moveDirection.x * moveSpeed;
+        //new Vector3(moveDirection.x * moveSpeed, moveDirection.z * moveSpeed, moveDirection.y * moveSpeed);
     }
 
     private void Fire(InputAction.CallbackContext context)
