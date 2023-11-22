@@ -34,6 +34,9 @@ public class PilotController : MonoBehaviour
     public TMP_Text embarkText;
     private float embarkDist = 7f;
 
+    //public Transform Pilot;
+
+
     //Update
     //Movement
     //Jump
@@ -112,7 +115,7 @@ public class PilotController : MonoBehaviour
         {
             titanActive = true;
             //transform.position.x + 10, transform.position.y + 300, transform.position.z  inside Vector3
-            Instantiate(titan, new Vector3(0, 300, 0), Quaternion.identity);
+            Instantiate(titan, new Vector3(0, 300, 0), Quaternion.Euler(new Vector3(0, -90, 0))); 
             Instantiate(dropLocation, new Vector3(0, 0.5f, 0), Quaternion.identity);
         }
     }

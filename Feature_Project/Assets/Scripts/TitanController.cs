@@ -13,6 +13,27 @@ public class TitanController : MonoBehaviour
     private bool groundContact = false;
     public Rigidbody rb;
 
+
+    private void Awake()
+    {
+        /*
+        transform.LookAt(Pilot.transform.position);
+        //transform.Rotate(0, 0, 0);
+        */
+
+        /*
+        GameObject Pilot = GameObject.Find("Player_Pilot");
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(transform.position - Pilot.transform.position), 100f);
+        */
+
+        /*
+        Vector3 direction = Pilot.transform.position - transform.position;
+        Quaternion rotation = Quaternion.LookRotation(direction);
+        transform.rotation = rotation;
+        */
+    }
+
+
     //On spawn fall until ground
     private void Update()
     {
