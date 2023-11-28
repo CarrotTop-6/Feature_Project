@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1510,6 +1510,9 @@ MonoBehaviour:
   titan: {fileID: 5624139248084578998, guid: 9cfce8105f851b6458ba58bbb5395317, type: 3}
   dropLocation: {fileID: 7540671788620757994, guid: ba2eef2ded7aafd4abeb03cf58c042b8,
     type: 3}
+  insideEmbark: 0
+  insideTitan: 0
+  pilot: {fileID: 1762482598}
   rb: {fileID: 1762482604}
   titanActive: 0
   embarkText: {fileID: 1349100130}

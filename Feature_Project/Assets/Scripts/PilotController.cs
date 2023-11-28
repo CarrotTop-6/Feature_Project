@@ -15,13 +15,20 @@ using UnityEngine.UI;
 
 public class PilotController : MonoBehaviour
 {
+    
+
+
     //Variables
     public GameObject titan;
     public GameObject dropLocation;
+    public bool insideEmbark = false;
+    public bool insideTitan = false;
+    public GameObject pilot;
 
     public PlayerInputActions pilotControls;
     private InputAction move;
     private InputAction fire;
+    private InputAction enterTitan;
     private InputAction titanSpawn;
 
     Vector3 moveDirection = Vector3.zero;
@@ -58,7 +65,11 @@ public class PilotController : MonoBehaviour
 
         titanSpawn = pilotControls.Player.Titan;
         titanSpawn.Enable();
-        titanSpawn.performed += titanFall;
+        titanSpawn.performed += TitanFall;
+
+        enterTitan = pilotControls.Player.Embark;
+        enterTitan.Enable();
+        enterTitan.performed += Embark;
     }
 
     private void OnDisable()
@@ -66,6 +77,7 @@ public class PilotController : MonoBehaviour
         move.Disable();
         fire.Disable();
         titanSpawn.Disable();
+        enterTitan.Disable();
     }
 
     //Spawn Titan (raycast / position in front)
@@ -84,15 +96,21 @@ public class PilotController : MonoBehaviour
         {
             if (Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, GameObject.FindGameObjectWithTag("Titan").transform.position) < embarkDist) 
             {
-                Debug.Log("X to Embark");
+                insideEmbark = true;
                 embarkText.text = "X to Embark";
             }
             else
             {
+                insideEmbark = false;
                 embarkText.text = "";
             }
         }
         
+        if(insideTitan == true)
+        {
+            //turns pilot off, potentially
+            pilot.SetActive(false);
+        }
     }
 
 
@@ -109,7 +127,7 @@ public class PilotController : MonoBehaviour
         Debug.Log("Fire");
     }
 
-    private void titanFall(InputAction.CallbackContext context)
+    private void TitanFall(InputAction.CallbackContext context)
     {
         if(titanActive == false)
         {
@@ -117,6 +135,19 @@ public class PilotController : MonoBehaviour
             //transform.position.x + 10, transform.position.y + 300, transform.position.z  inside Vector3
             Instantiate(titan, new Vector3(0, 300, 0), Quaternion.Euler(new Vector3(0, -90, 0))); 
             Instantiate(dropLocation, new Vector3(0, 0.5f, 0), Quaternion.identity);
+        }
+    }
+
+    private void Embark(InputAction.CallbackContext context)
+    {
+        if(insideEmbark == true)
+        {
+            Debug.Log("In range to get in titan");
+            insideTitan = true;
+        }
+        else
+        {
+            Debug.Log("not in range");
         }
     }
 }
