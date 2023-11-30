@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 //Jack Bradford
@@ -31,6 +32,8 @@ public class TitanController : MonoBehaviour
         Quaternion rotation = Quaternion.LookRotation(direction);
         transform.rotation = rotation;
         */
+
+        transform.position = new Vector3(transform.position.x, transform.position.y + 300, transform.position.z);
     }
 
 

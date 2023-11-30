@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -15,8 +16,6 @@ using UnityEngine.UI;
 
 public class PilotController : MonoBehaviour
 {
-    
-
 
     //Variables
     public GameObject titan;
@@ -24,6 +23,8 @@ public class PilotController : MonoBehaviour
     public bool insideEmbark = false;
     public bool insideTitan = false;
     public GameObject pilot;
+
+    public float distanceFromPilot = 2;
 
     public PlayerInputActions pilotControls;
     private InputAction move;
@@ -133,8 +134,19 @@ public class PilotController : MonoBehaviour
         {
             titanActive = true;
             //transform.position.x + 10, transform.position.y + 300, transform.position.z  inside Vector3
-            Instantiate(titan, new Vector3(0, 300, 0), Quaternion.Euler(new Vector3(0, -90, 0))); 
-            Instantiate(dropLocation, new Vector3(0, 0.5f, 0), Quaternion.identity);
+            //Instantiate(titan, new Vector3(0, 300, 0), Quaternion.Euler(new Vector3(0, -90, 0)));
+            //Instantiate(dropLocation, new Vector3(0, 0.5f, 0), Quaternion.identity);
+
+            Vector3 pilotPos = pilot.transform.position;
+            Vector3 pilotDirection = pilot.transform.forward;
+            Quaternion pilotRotation = pilot.transform.rotation;
+            float spawnDistance = 15;
+
+            Vector3 spawnPos = pilotPos + pilotDirection * spawnDistance;
+
+            Instantiate(titan, spawnPos , Quaternion.identity); 
+
+            Instantiate(dropLocation, spawnPos, Quaternion.identity);
         }
     }
 

@@ -151,7 +151,7 @@ Transform:
   m_GameObject: {fileID: 229195832}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.422081, y: 2.68, z: -9.515798}
+  m_LocalPosition: {x: 20.44, y: 2.68, z: -19.56}
   m_LocalScale: {x: 5, y: 9.69, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -328,7 +328,7 @@ Transform:
   m_GameObject: {fileID: 297565813}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.422081, y: 2.6800003, z: 15.484202}
+  m_LocalPosition: {x: 20.51, y: 2.6800003, z: 25.68}
   m_LocalScale: {x: 5, y: 9.69, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -772,7 +772,7 @@ Transform:
   m_GameObject: {fileID: 447685921}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.577919, y: 2.6800003, z: 15.484202}
+  m_LocalPosition: {x: -24.6, y: 2.6800003, z: 25.52}
   m_LocalScale: {x: 5, y: 9.69, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -962,7 +962,7 @@ Transform:
   m_GameObject: {fileID: 1215416551}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.577919, y: 2.6800003, z: -9.515798}
+  m_LocalPosition: {x: -24.5, y: 2.6800003, z: -19.56}
   m_LocalScale: {x: 5, y: 9.69, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1513,6 +1513,7 @@ MonoBehaviour:
   insideEmbark: 0
   insideTitan: 0
   pilot: {fileID: 1762482598}
+  distanceFromPilot: 2
   rb: {fileID: 1762482604}
   titanActive: 0
   embarkText: {fileID: 1349100130}
