@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3192674953398553796}
   - component: {fileID: 162796817221829686}
   m_Layer: 0
-  m_Name: Projectile
+  m_Name: Thermite_Grenade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

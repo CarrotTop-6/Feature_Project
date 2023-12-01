@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using Cinemachine;
 
 //Jack Bradford
 //Controls the pilots movement and can deploy a titan
@@ -16,9 +17,12 @@ using UnityEngine.UI;
 
 public class PilotController : MonoBehaviour
 {
+    public CinemachineVirtualCamera vcCamera;
+    public CinemachineVirtualCamera titanCamera;
 
     [Header("Titan")]
     public GameObject titan;
+    public Transform titan_transform;
     public GameObject dropLocation;
     public bool insideTitan = false;
     public GameObject pilot;
@@ -50,6 +54,7 @@ public class PilotController : MonoBehaviour
     public GameObject bulletPrefab;
     public float bulletSpeed = 10;
 
+    
 
 
     //Update
@@ -117,7 +122,7 @@ public class PilotController : MonoBehaviour
         if(insideTitan == true)
         {
             //turns pilot off, potentially
-            pilot.SetActive(false);
+            //pilot.SetActive(false);
         }
     }
 
@@ -156,7 +161,7 @@ public class PilotController : MonoBehaviour
 
             Vector3 spawnPos = pilotPos + pilotDirection * spawnDistance;
 
-            Instantiate(titan, spawnPos , Quaternion.identity); 
+            Instantiate(titan, spawnPos , Quaternion.identity);
 
             Instantiate(dropLocation, spawnPos, Quaternion.identity);
         }
@@ -168,10 +173,17 @@ public class PilotController : MonoBehaviour
         {
             Debug.Log("In range to get in titan");
             insideTitan = true;
+            //vcCamera.Follow = titan_transform.transform;
+            
         }
         else
         {
             Debug.Log("not in range");
         }
+    }
+
+    private void SwitchToCamera (CinemachineVirtualCamera targetCamera)
+    {
+
     }
 }

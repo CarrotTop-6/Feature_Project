@@ -7,8 +7,8 @@ public class RaycastLazer : MonoBehaviour
     public Camera playerCamrea;
     public Transform lazerOrigin;
     public float lazerRange = 50f;
-    public float fireRate = 0.2f;
-    public float lazerDuration = 0.05f;
+    public float fireRate = 1.0f;
+    public float lazerDuration = 1f;
 
     LineRenderer lazerLine;
     float fireTimer;
