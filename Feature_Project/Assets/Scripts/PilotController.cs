@@ -17,21 +17,26 @@ using UnityEngine.UI;
 public class PilotController : MonoBehaviour
 {
 
-    //Variables
+    [Header("Titan")]
     public GameObject titan;
     public GameObject dropLocation;
-    public bool insideEmbark = false;
     public bool insideTitan = false;
     public GameObject pilot;
-
     public float distanceFromPilot = 2;
 
+    [Header("Embark")]
+    public bool insideEmbark = false;
+    public TMP_Text embarkText;
+    private float embarkDist = 7f;
+
+    [Header("Input Actions")]
     public PlayerInputActions pilotControls;
     private InputAction move;
     private InputAction fire;
     private InputAction enterTitan;
     private InputAction titanSpawn;
 
+    [Header("Pilot Movement")]
     Vector3 moveDirection = Vector3.zero;
     public Rigidbody rb;
     private float moveSpeed = 5.0f;
@@ -39,10 +44,12 @@ public class PilotController : MonoBehaviour
     [SerializeField]
     private bool titanActive = false;
 
-    public TMP_Text embarkText;
-    private float embarkDist = 7f;
 
-    //public Transform Pilot;
+    [Header("Bullet")]
+    public Transform bulletSpawnPoint;
+    public GameObject bulletPrefab;
+    public float bulletSpeed = 10;
+
 
 
     //Update
@@ -126,6 +133,11 @@ public class PilotController : MonoBehaviour
     private void Fire(InputAction.CallbackContext context)
     {
         Debug.Log("Fire");
+
+        /*
+        var bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+        bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPoint.forward * bulletSpeed;
+        */
     }
 
     private void TitanFall(InputAction.CallbackContext context)

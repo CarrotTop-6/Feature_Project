@@ -935,7 +935,7 @@ GameObject:
   - component: {fileID: 2433716683370839910}
   - component: {fileID: 6736761480116775460}
   m_Layer: 0
-  m_Name: Drop Zone
+  m_Name: Drop_Zone
   m_TagString: LandingPad
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
