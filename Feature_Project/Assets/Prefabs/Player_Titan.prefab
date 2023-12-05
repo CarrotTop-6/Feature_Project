@@ -545,7 +545,7 @@ MonoBehaviour:
   lazerOrigin: {fileID: 8830838662393492245}
   lazerRange: 50
   fireRate: 0.2
-  lazerDuration: 0.05
+  lazerDuration: 0.15
 --- !u!1 &1785182603577715128
 GameObject:
   m_ObjectHideFlags: 0
@@ -1037,7 +1037,7 @@ MonoBehaviour:
   launchPoint: {fileID: 7149190491781269836}
   projectile: {fileID: 219580107734089787, guid: 0bc428f8b871813449bb3495e7bc3ad0,
     type: 3}
-  launchVelocity: 30
+  launchVelocity: 50
 --- !u!1 &2263897251089048041
 GameObject:
   m_ObjectHideFlags: 0
@@ -2493,6 +2493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 6916666480612566981}
+  inTitan: 0
 --- !u!1 &5974261970633815023
 GameObject:
   m_ObjectHideFlags: 0
@@ -2722,7 +2723,7 @@ MonoBehaviour:
   bulletSpawnPoint: {fileID: 7744482093289934320}
   bulletPrefab: {fileID: 5629758803538851637, guid: b1c69f49dc4dba64c85c2173f5b203c3,
     type: 3}
-  bulletSpeed: 10
+  bulletSpeed: 40
 --- !u!1 &6868165567759650543
 GameObject:
   m_ObjectHideFlags: 0
@@ -3370,7 +3371,7 @@ MonoBehaviour:
   salvoSpawnPoint: {fileID: 1167053803655158540}
   rocketPrefab: {fileID: 63691471871565216, guid: 5c4da02cd19b7f04b86f6ed6e475314d,
     type: 3}
-  rocketSpeed: 10
+  rocketSpeed: 30
 --- !u!1 &8702978664412537102
 GameObject:
   m_ObjectHideFlags: 0
