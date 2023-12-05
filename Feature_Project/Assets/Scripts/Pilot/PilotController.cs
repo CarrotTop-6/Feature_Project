@@ -17,6 +17,8 @@ using Cinemachine;
 
 public class PilotController : MonoBehaviour
 {
+    public static PilotController Instance;
+
     [Header("Camera")]
     public CinemachineVirtualCamera vcCamera;
     public CinemachineVirtualCamera titanCamera;
@@ -55,8 +57,8 @@ public class PilotController : MonoBehaviour
     public GameObject bulletPrefab;
     public float bulletSpeed = 10;
 
-    
 
+    
 
     //Update
     //Movement

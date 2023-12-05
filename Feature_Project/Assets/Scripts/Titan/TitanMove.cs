@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMove : MonoBehaviour
+public class TitanMove : MonoBehaviour
 {
     public Rigidbody rb;
     private float moveSpeed = 10.0f;
@@ -12,19 +12,17 @@ public class PlayerMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        Run();
-        /*
-        if (PilotController.Instance.insideTitan)
+
+        if (PilotController.Instance.insideTitan == true)
         {
-            
+            Run();
         }
-        */
     }
 
     private void Run()
