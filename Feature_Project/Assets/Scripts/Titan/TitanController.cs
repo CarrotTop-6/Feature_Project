@@ -4,7 +4,7 @@ using UnityEditor.Rendering;
 using UnityEngine;
 
 //Jack Bradford
-//Controls Titan spawning, movement, and abilities
+//Controls Titan spawn
 //11/7/2023
 
 public class TitanController : MonoBehaviour
@@ -48,6 +48,7 @@ public class TitanController : MonoBehaviour
     //Abilities
     //Core Ability
 
+    //fall until the titan hits the ground
     private void inbound()
     {
         if (groundContact == false)
@@ -56,6 +57,7 @@ public class TitanController : MonoBehaviour
         }
     }
 
+    //Collisions
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.CompareTag("Enviroment"))

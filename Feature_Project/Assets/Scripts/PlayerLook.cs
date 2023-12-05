@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//11/21
+//Jack Bradford
+//Controls the camera, and follows mouse movement
+//11/21/23
 
 public class PlayerLook : MonoBehaviour
 {

@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+//Jack Bradford
+//Set the drop zone
 //11/30/23
 
 public class DropZone : MonoBehaviour
