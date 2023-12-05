@@ -17,6 +17,7 @@ using Cinemachine;
 
 public class PilotController : MonoBehaviour
 {
+    [Header("Camera")]
     public CinemachineVirtualCamera vcCamera;
     public CinemachineVirtualCamera titanCamera;
 
@@ -173,6 +174,7 @@ public class PilotController : MonoBehaviour
         {
             Debug.Log("In range to get in titan");
             insideTitan = true;
+            SwitchToCamera();
             //vcCamera.Follow = titan_transform.transform;
             
         }
@@ -182,8 +184,9 @@ public class PilotController : MonoBehaviour
         }
     }
 
-    private void SwitchToCamera (CinemachineVirtualCamera targetCamera)
+    private void SwitchToCamera ()
     {
-
+        vcCamera.Priority = 0;
+        titanCamera.Priority = 1;
     }
 }

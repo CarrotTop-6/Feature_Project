@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 3970972363026457266}
   - component: {fileID: 7100448777319155282}
   - component: {fileID: 7481865042158977703}
-  - component: {fileID: 8314641128962421569}
+  - component: {fileID: 2694696921055150541}
   m_Layer: 0
-  m_Name: Rocket
+  m_Name: RocketContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -136,7 +136,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8314641128962421569
+--- !u!114 &2694696921055150541
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,6 +145,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 63691471871565216}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f01ee2684e6a9a149a480eab80772e3a, type: 3}
+  m_Script: {fileID: 11500000, guid: 3526c1fe8dfa0d74baef708813443e8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 4505198421834938125, guid: 9561bb062d372004b8e0df808cf327c6,
+    type: 3}
