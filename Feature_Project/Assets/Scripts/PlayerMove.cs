@@ -13,8 +13,6 @@ public class PlayerMove : MonoBehaviour
     private float moveSpeed = 10.0f;
     Vector2 moveInput;
 
-    public bool inTitan;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -24,12 +22,19 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD:Feature_Project/Assets/Scripts/PlayerMove.cs
+        Run();
+        /*
+        if (PilotController.Instance.insideTitan)
+=======
         //Checks to make sure player is not in titan
         inTitan = GameObject.Find("Player_Pilot").GetComponent<PilotController>().insideTitan;
         if (inTitan == false)
+>>>>>>> parent of 776b46b (Revert "Final version finished"):Feature_Project/Assets/Scripts/Pilot/PlayerMove.cs
         {
-            Run();
+            
         }
+        */
     }
 
     //get move value
