@@ -2309,7 +2309,7 @@ GameObject:
   - component: {fileID: 6314471181282144314}
   - component: {fileID: 6916666480612566981}
   - component: {fileID: 2519531659623952534}
-  - component: {fileID: 4953859424340365345}
+  - component: {fileID: 8912139519196122918}
   m_Layer: 0
   m_Name: Player_Titan
   m_TagString: Titan
@@ -2480,7 +2480,7 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &4953859424340365345
+--- !u!114 &8912139519196122918
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -21,8 +21,10 @@ public class TitanMove : MonoBehaviour
     void Update()
     {
         inTitan = GameObject.Find("Player_Pilot").GetComponent<PilotController>().insideTitan;
+        Debug.Log("1");
         if (inTitan == true)
         {
+            Debug.Log("2");
             Run();
         }
     }
