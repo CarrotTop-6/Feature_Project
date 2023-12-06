@@ -110,7 +110,7 @@ public class PilotController : MonoBehaviour
 
         if(titanActive)
         {
-            if (Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, GameObject.FindGameObjectWithTag("Titan").transform.position) < embarkDist && insideTitan == false) 
+            if (Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, GameObject.FindGameObjectWithTag("Titan").transform.position) < embarkDist) 
             {
                 insideEmbark = true;
                 embarkText.text = "X to Embark";
@@ -177,7 +177,6 @@ public class PilotController : MonoBehaviour
             Debug.Log("In range to get in titan");
             insideTitan = true;
             SwitchToCamera();
-            GetComponent<MeshRenderer>().enabled = false;
             //vcCamera.Follow = titan_transform.transform;
             
         }
