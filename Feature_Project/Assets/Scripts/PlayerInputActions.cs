@@ -618,6 +618,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
         m_Player_Titan = m_Player.FindAction("Titan", throwIfNotFound: true);
         m_Player_Embark = m_Player.FindAction("Embark", throwIfNotFound: true);
+<<<<<<< HEAD
         // Titan
         m_Titan = asset.FindActionMap("Titan", throwIfNotFound: true);
         m_Titan_Move = m_Titan.FindAction("Move", throwIfNotFound: true);
@@ -625,6 +626,20 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Titan_ScorchFire = m_Titan.FindAction("ScorchFire", throwIfNotFound: true);
         m_Titan_IonBeam = m_Titan.FindAction("IonBeam", throwIfNotFound: true);
         m_Titan_RocketSalvo = m_Titan.FindAction("RocketSalvo", throwIfNotFound: true);
+=======
+        // UI
+        m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
+        m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
+        m_UI_Submit = m_UI.FindAction("Submit", throwIfNotFound: true);
+        m_UI_Cancel = m_UI.FindAction("Cancel", throwIfNotFound: true);
+        m_UI_Point = m_UI.FindAction("Point", throwIfNotFound: true);
+        m_UI_Click = m_UI.FindAction("Click", throwIfNotFound: true);
+        m_UI_ScrollWheel = m_UI.FindAction("ScrollWheel", throwIfNotFound: true);
+        m_UI_MiddleClick = m_UI.FindAction("MiddleClick", throwIfNotFound: true);
+        m_UI_RightClick = m_UI.FindAction("RightClick", throwIfNotFound: true);
+        m_UI_TrackedDevicePosition = m_UI.FindAction("TrackedDevicePosition", throwIfNotFound: true);
+        m_UI_TrackedDeviceOrientation = m_UI.FindAction("TrackedDeviceOrientation", throwIfNotFound: true);
+>>>>>>> parent of 5fb207c (.)
     }
 
     public void Dispose()
