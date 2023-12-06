@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+//Jack Bradford
+//Controls the laser weapon
+//11/28/23
+
 public class RaycastLazer : MonoBehaviour
 {
     public Camera playerCamrea;
@@ -17,6 +21,7 @@ public class RaycastLazer : MonoBehaviour
     LineRenderer lazerLine;
     float fireTimer;
 
+    //find linerenderer
     private void Awake()
     {
         lazerLine = GetComponent<LineRenderer>();
@@ -30,6 +35,7 @@ public class RaycastLazer : MonoBehaviour
         ionBeam.performed += IonBeam;
     }
 
+    //fire lazer at position camera is looking at
     private void Update()
     {
         /*
@@ -40,6 +46,7 @@ public class RaycastLazer : MonoBehaviour
             lazerLine.SetPosition(0, lazerOrigin.position);
             Vector3 rayOrigin = playerCamrea.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0));
             RaycastHit hit;
+            //check to see if raycast is out of range of laser
             if(Physics.Raycast(rayOrigin, playerCamrea.transform.forward, out hit, lazerRange))
             {
                 lazerLine.SetPosition(1, hit.point);
@@ -78,6 +85,7 @@ public class RaycastLazer : MonoBehaviour
             StartCoroutine(ShootLazer());
     }
 
+    //enable line for set duration
     IEnumerator ShootLazer()
     {
         lazerLine.enabled = true;
