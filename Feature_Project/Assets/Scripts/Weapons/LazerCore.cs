@@ -2,12 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Jack Bradford
-//Create a continous laser that follows camera
-//11/30/23
-
-//DOES NOT WORK
-
 public class LazerCore : MonoBehaviour
 {
     public Camera playerCamrea;

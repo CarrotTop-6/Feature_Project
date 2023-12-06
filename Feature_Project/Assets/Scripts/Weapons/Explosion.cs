@@ -2,10 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Jack Bradford
-//Creates an after effect explosion
-//12/1/23
-
 public class Explosion : MonoBehaviour
 {
     private float expand = 0.5f;
@@ -13,7 +9,6 @@ public class Explosion : MonoBehaviour
     // Update is called once per frame
     void Start()
     {
-        //after being spawned, rapdily expand to set size then delete
         StartCoroutine(ExpRadius());
     }
 

@@ -70,7 +70,6 @@ public class PilotController : MonoBehaviour
         pilotControls = new PlayerInputActions();
     }
 
-    //For enable/disable, it apparently makes the controls run better
     private void OnEnable()
     {
         move = pilotControls.Player.Move;
@@ -99,8 +98,6 @@ public class PilotController : MonoBehaviour
 
     //Spawn Titan (raycast / position in front)
     //Detect range to titan (distance / box collider)
-
-    //Spawn a titan in front of the player, base of player position and rotation
     private void Update()
     {
         /*
@@ -141,7 +138,6 @@ public class PilotController : MonoBehaviour
         //new Vector3(moveDirection.x * moveSpeed, moveDirection.z * moveSpeed, moveDirection.y * moveSpeed);
     }
 
-    //Test for mouse click fire
     private void Fire(InputAction.CallbackContext context)
     {
         Debug.Log("Fire");
@@ -152,7 +148,6 @@ public class PilotController : MonoBehaviour
         */
     }
 
-    //Determine spawn location, and instantiate the drop zone
     private void TitanFall(InputAction.CallbackContext context)
     {
         if(titanActive == false)
@@ -175,7 +170,6 @@ public class PilotController : MonoBehaviour
         }
     }
 
-    //Lets the player embark inside the titan
     private void Embark(InputAction.CallbackContext context)
     {
         if(insideEmbark == true)
@@ -193,7 +187,6 @@ public class PilotController : MonoBehaviour
         }
     }
 
-    //Controls switching from Pilot to Titan
     private void SwitchToCamera ()
     {
         vcCamera.Priority = 0;

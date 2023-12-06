@@ -138,7 +138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5305483
 Transform:
   m_ObjectHideFlags: 0
@@ -2868,7 +2868,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1762482604}
-  inTitan: 0
 --- !u!114 &1762482606
 MonoBehaviour:
   m_ObjectHideFlags: 0

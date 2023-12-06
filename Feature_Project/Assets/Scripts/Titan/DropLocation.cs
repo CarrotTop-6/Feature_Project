@@ -2,10 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Jack Bradford
-//
-//11/23/23
-
 public class DropLocation : MonoBehaviour
 {
     // Start is called before the first frame update
