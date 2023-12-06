@@ -20,14 +20,12 @@ public class TitanMove : MonoBehaviour
     {
 <<<<<<< HEAD
         inTitan = GameObject.Find("Player_Pilot").GetComponent<PilotController>().insideTitan;
-        Debug.Log("1");
         if (inTitan == true)
 =======
 
         if (PilotController.Instance.insideTitan == true)
 >>>>>>> parent of ee81c9e (Titan camera and controls switch, 4 working guns)
         {
-            Debug.Log("2");
             Run();
         }
     }
