@@ -28,17 +28,12 @@ public class RaycastLazer : MonoBehaviour
         titanControls = new PlayerInputActions();
     }
 
-    private void OnEnable()
-    {
-        ionBeam = titanControls.Titan.IonBeam;
-        ionBeam.Enable();
-        ionBeam.performed += IonBeam;
-    }
+    
 
     //fire lazer at position camera is looking at
     private void Update()
     {
-        /*
+        
         fireTimer += Time.deltaTime;
         if(Input.GetKeyDown("l") && fireTimer > fireRate)
         {
@@ -58,9 +53,10 @@ public class RaycastLazer : MonoBehaviour
             }
             StartCoroutine(ShootLazer());
         }
-        */
+        
     }
 
+    /*
     //Swtiched to new Input System
     private void IonBeam(InputAction.CallbackContext context)
     {
@@ -84,6 +80,7 @@ public class RaycastLazer : MonoBehaviour
             }
             StartCoroutine(ShootLazer());
     }
+    */
 
     //enable line for set duration
     IEnumerator ShootLazer()

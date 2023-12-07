@@ -113,7 +113,7 @@ public class PilotController : MonoBehaviour
 
         if(titanActive)
         {
-            if (Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, GameObject.FindGameObjectWithTag("Titan").transform.position) < embarkDist) 
+            if (Vector3.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, GameObject.FindGameObjectWithTag("Titan").transform.position) < embarkDist && insideTitan == false) 
             {
                 insideEmbark = true;
                 embarkText.text = "X to Embark";
