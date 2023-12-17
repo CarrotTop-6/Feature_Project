@@ -905,6 +905,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
         m_Player_Titan = m_Player.FindAction("Titan", throwIfNotFound: true);
         m_Player_Embark = m_Player.FindAction("Embark", throwIfNotFound: true);
+<<<<<<< Updated upstream
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -917,6 +918,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_UI_RightClick = m_UI.FindAction("RightClick", throwIfNotFound: true);
         m_UI_TrackedDevicePosition = m_UI.FindAction("TrackedDevicePosition", throwIfNotFound: true);
         m_UI_TrackedDeviceOrientation = m_UI.FindAction("TrackedDeviceOrientation", throwIfNotFound: true);
+=======
+        // Titan
+        m_Titan = asset.FindActionMap("Titan", throwIfNotFound: true);
+        m_Titan_Move = m_Titan.FindAction("Move", throwIfNotFound: true);
+        m_Titan_MonarchFire = m_Titan.FindAction("MonarchFire", throwIfNotFound: true);
+        m_Titan_ScorchFire = m_Titan.FindAction("ScorchFire", throwIfNotFound: true);
+        m_Titan_IonBeam = m_Titan.FindAction("IonBeam", throwIfNotFound: true);
+        m_Titan_RocketSalvo = m_Titan.FindAction("RocketSalvo", throwIfNotFound: true);
+>>>>>>> Stashed changes
     }
 
     public void Dispose()

@@ -933,7 +933,7 @@ GameObject:
   - component: {fileID: 6582791335219848893}
   - component: {fileID: 4093142939515961424}
   - component: {fileID: 2433716683370839910}
-  - component: {fileID: 6736761480116775460}
+  - component: {fileID: 6423387705689927106}
   m_Layer: 0
   m_Name: Drop_Zone
   m_TagString: LandingPad
@@ -1028,7 +1028,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6736761480116775460
+--- !u!114 &6423387705689927106
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1037,7 +1037,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7540671788620757994}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b961b568f41b3f640a380985c3ad095d, type: 3}
+  m_Script: {fileID: 11500000, guid: 8121950059ca5ad428fd9e531f406450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &5654659749258377118

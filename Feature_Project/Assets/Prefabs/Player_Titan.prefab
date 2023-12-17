@@ -2307,10 +2307,8 @@ GameObject:
   - component: {fileID: 3237859692474370901}
   - component: {fileID: 8744182016375178606}
   - component: {fileID: 5502687012241831251}
-  - component: {fileID: 6314471181282144314}
   - component: {fileID: 6916666480612566981}
-  - component: {fileID: 2519531659623952534}
-  - component: {fileID: 4953859424340365345}
+  - component: {fileID: 1634134597985915390}
   m_Layer: 0
   m_Name: Player_Titan
   m_TagString: Titan
@@ -2409,19 +2407,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6314471181282144314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5624139248084578998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 742fe665241dfc74fab354461332267f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 6916666480612566981}
 --- !u!54 &6916666480612566981
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2449,7 +2434,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 2
---- !u!114 &2519531659623952534
+--- !u!114 &1634134597985915390
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2458,38 +2443,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5624139248084578998}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 819513c013953034fb5c71518b6d558b,
-    type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
---- !u!114 &4953859424340365345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5624139248084578998}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6165ef8982a05f4dafdbb24577562ee, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e47020cf73e468469924ecd800fa92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 6916666480612566981}

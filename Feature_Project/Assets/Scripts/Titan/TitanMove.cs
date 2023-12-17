@@ -13,7 +13,11 @@ public class TitanMove : MonoBehaviour
     private float moveSpeed = 10.0f;
     Vector2 moveInput;
 
+<<<<<<< Updated upstream
     public bool inTitan = false;
+=======
+    public bool inTitan;
+>>>>>>> Stashed changes
 
     // Start is called before the first frame update
     void Start()
@@ -28,12 +32,16 @@ public class TitanMove : MonoBehaviour
         inTitan = GameObject.Find("Player_Pilot").GetComponent<PilotController>().insideTitan;   //Tried to make PilotController a static variable, but it would not let me create an instance of the boolean
         if (inTitan == true)
         {
-            Run();
+            
         }
+<<<<<<< Updated upstream
         else
         {
             return;
         }
+=======
+        Run();
+>>>>>>> Stashed changes
     }
 
     //Get move value
