@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Rendering;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 //Jack Bradford
 //Controls Titan spawn
@@ -13,7 +14,6 @@ public class TitanController1 : MonoBehaviour
     private float fallSpeed = -80;
     private bool groundContact = false;
     public Rigidbody rb;
-
 
     private void Awake()
     {
@@ -42,11 +42,7 @@ public class TitanController1 : MonoBehaviour
     {
         inbound();
     }
-    //When player inside
-    //Move
-    //Dash??
-    //Abilities
-    //Core Ability
+
 
     //fall until the titan hits the ground
     private void inbound()

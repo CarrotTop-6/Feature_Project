@@ -44,7 +44,7 @@
                 {
                     "name": "Embark",
                     "type": "Button",
-                    "id": "7ab7dc4c-0e24-4a64-a290-5fdc7127ab58",
+                    "id": "10dd96ec-c4c9-45a7-beff-25cba11a555f",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -285,7 +285,7 @@
                 },
                 {
                     "name": "",
-                    "id": "cc96da91-a864-4774-98d7-d0946d776cdb",
+                    "id": "e7fbb59e-b4b7-4a38-9b24-27ae1ea36544",
                     "path": "<Keyboard>/x",
                     "interactions": "",
                     "processors": "",

@@ -31,10 +31,12 @@ public class PilotController : MonoBehaviour
     public GameObject pilot;
     public float distanceFromPilot = 2;
 
+    
     [Header("Embark")]
     public bool insideEmbark = false;
     public TMP_Text embarkText;
     private float embarkDist = 7f;
+    
 
     [Header("Input Actions")]
     public PlayerInputActions pilotControls;
@@ -84,9 +86,11 @@ public class PilotController : MonoBehaviour
         titanSpawn.Enable();
         titanSpawn.performed += TitanFall;
 
+        
         enterTitan = pilotControls.Player.Embark;
         enterTitan.Enable();
         enterTitan.performed += Embark;
+        
     }
 
     private void OnDisable()
@@ -94,7 +98,7 @@ public class PilotController : MonoBehaviour
         move.Disable();
         fire.Disable();
         titanSpawn.Disable();
-        enterTitan.Disable();
+        //enterTitan.Disable();
     }
 
     //Spawn Titan (raycast / position in front)

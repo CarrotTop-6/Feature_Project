@@ -15,22 +15,10 @@ public class PlayerMove : MonoBehaviour
 
     public bool inTitan = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
-<<<<<<< Updated upstream
-
-=======
-        Run();
-        /*
-        if (PilotController.Instance.insideTitan)
->>>>>>> Stashed changes
         //Checks to make sure player is not in titan
         inTitan = GameObject.Find("Player_Pilot").GetComponent<PilotController>().insideTitan;
         if (inTitan == false)
