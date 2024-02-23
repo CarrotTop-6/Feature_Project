@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Jack Bradford
-//Controls the auncher weapon
+//Controls the launcher weapon
 //11/28/23
 
-public class LaunchProjectile : MonoBehaviour
+public class t_203Launcher : MonoBehaviour
 {
     public Transform launchPoint;
     public GameObject projectile;
-    public float launchVelocity = 10f;
+    public float launchVelocity = 30f;
 
     private void Update()
     {

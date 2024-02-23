@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4923786676981007820}
   - component: {fileID: 3192674953398553796}
   - component: {fileID: 162796817221829686}
+  - component: {fileID: -6393030919440615893}
   m_Layer: 0
   m_Name: Thermite_Grenade
   m_TagString: Untagged
@@ -146,3 +147,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f01ee2684e6a9a149a480eab80772e3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-6393030919440615893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219580107734089787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e54ebd2b1e4392548a5e903dd94cecfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 4505198421834938125, guid: 9561bb062d372004b8e0df808cf327c6,
+    type: 3}

@@ -49,10 +49,11 @@ public class PilotController : MonoBehaviour
     Vector3 moveDirection = Vector3.zero;
     public Rigidbody rb;
     private float moveSpeed = 5.0f;
+    public Collider pilotCollider;
 
     [SerializeField]
     private bool titanActive = false;
-
+    public MeshRenderer pilotMesh;
 
     [Header("Bullet")]
     public Transform bulletSpawnPoint;
@@ -187,8 +188,11 @@ public class PilotController : MonoBehaviour
             Debug.Log("In range to get in titan");
             insideTitan = true;
             SwitchToCamera();
+            pilotMesh.enabled = false;
+            pilotCollider.enabled = false;
+            this.enabled = false;
             //vcCamera.Follow = titan_transform.transform;
-            
+
         }
         else
         {

@@ -11,7 +11,7 @@ public class RaycastLazer : MonoBehaviour
 {
     public Camera playerCamrea;
     public Transform lazerOrigin;
-    public float lazerRange = 50f;
+    public float lazerRange = 100f;
     public float fireRate = 1.0f;
     public float lazerDuration = 1f;
 
@@ -41,9 +41,13 @@ public class RaycastLazer : MonoBehaviour
             lazerLine.SetPosition(0, lazerOrigin.position);
             Vector3 rayOrigin = playerCamrea.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0));
             RaycastHit hit;
-            //check to see if raycast is out of range of laser
-            if(Physics.Raycast(rayOrigin, playerCamrea.transform.forward, out hit, lazerRange))
+                //check to see if raycast is out of range of laser
+            if (Physics.Raycast(rayOrigin, playerCamrea.transform.forward, out hit, lazerRange))
             {
+                if (hit.transform.CompareTag("Enemy"))
+                {
+                    Destroy(hit.transform.gameObject);
+                }
                 lazerLine.SetPosition(1, hit.point);
                 //Destroy(hit.transform.gameObject);
             }
@@ -88,5 +92,13 @@ public class RaycastLazer : MonoBehaviour
         lazerLine.enabled = true;
         yield return new WaitForSeconds(lazerDuration);
         lazerLine.enabled = false;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Destroy(collision.gameObject);
+        }
     }
 }

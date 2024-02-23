@@ -35,8 +35,9 @@ public class PlayerMove : MonoBehaviour
     }
     
     //set movement
-    public void OnMove(InputValue value)
+    private void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
+        Debug.Log("OnMove P");
     }
 }
